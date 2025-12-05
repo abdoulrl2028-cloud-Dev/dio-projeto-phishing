@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Portal de Acesso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="logo">
+                <h1>Portal Seguro</h1>
+            </div>
+            <form id="loginForm" method="POST">
+                <div class="form-group">
+                    <label for="username">Usuário:</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        placeholder="Digite seu usuário" 
+                        required
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Digite sua senha" 
+                        required
+                    >
+                </div>
+                
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Lembrar-me</label>
+                </div>
+                
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+            
+            <div class="footer-links">
+                <a href="#forgot">Esqueceu a senha?</a>
+                <a href="#register">Registrar-se</a>
+            </div>
+        </div>
+        
+        <div class="disclaimer">
+            <p><strong>⚠️ AVISO EDUCACIONAL:</strong> Esta página é uma simulação para fins educacionais apenas.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
